@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAJA PREDIKSI | Menang Parlay Hari Ini</title>
-    
     <meta name="description" content="Dapatkan prediksi skor parlay paling akurat hari ini. Analisis mendalam dari pakar untuk liga-liga top Eropa (EPL, LaLiga, Serie A). Menang jutaan sekarang!">
     <meta property="og:title" content="RAJA PREDIKSI | Menang Parlay Hari Ini">
     <meta property="og:description" content="Prediksi Skor Parlay Paling Akurat. Analisis Mendalam dari Pakar Liga Top Eropa.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://2livebet303.work/">
     <meta property="og:image" content="https://i.postimg.cc/SKFd6kQS/LOGO-LIVEBET303.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         :root {
             --color-bg-dark: #0a0a0a;
@@ -35,585 +32,102 @@
             --color-glow-soft: rgba(255, 215, 0, 0.3);
             --color-shimmer: rgba(255, 255, 255, 0.15);
         }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(200%); }
-        }
-        @keyframes card-glow-pulse {
-            0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.7); }
-            50% { box-shadow: 0 0 15px var(--color-glow), 0 0 25px rgba(255, 215, 0, 0.5); }
-            100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.7); }
-        }
-        @keyframes glow-blink {
-            0%, 100% { box-shadow: 0 0 10px var(--color-glow-soft), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(0,0,0,0.5); }
-            50% { box-shadow: 0 0 25px var(--color-glow), 0 0 40px rgba(255, 215, 0, 0.5), 0 0 50px rgba(255, 215, 0, 0.3); }
-        }
-        @keyframes scale-pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-        @keyframes title-glow-blink {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 5px rgba(255, 255, 255, 0.3); }
-            50% { text-shadow: 0 0 30px var(--color-primary), 0 0 15px rgba(255, 255, 255, 0.7); }
-        }
-        @keyframes ticker-move {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-bg-dark);
-            color: var(--color-text-light);
-            line-height: 1.6;
-        }
-        .container {
-            width: 95%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 0 40px 0;
-            position: relative;
-            z-index: 2;
-        }
-
-        header {
-            background: var(--gradient-footer-bg);
-            padding: 15px 0;
-            position: relative;
-            text-align: center;
-            z-index: 100;
-        }
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gradient-header-border);
-        }
-        .logo-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 95%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo { display: flex; align-items: center; }
-        .logo img { height: 35px; margin-right: 10px; }
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6em;
-            font-weight: 900;
-            color: var(--color-text-light);
-            text-shadow: 0 0 8px var(--color-glow-soft);
-        }
-        .auth-buttons a {
-            color: var(--color-text-light);
-            text-decoration: none;
-            padding: 8px 15px;
-            margin-left: 10px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            transition: background-color 0.3s;
-        }
-        .auth-buttons .login { background-color: #333; }
-        .auth-buttons .register { background-color: var(--color-secondary); }
-        .auth-buttons .register:hover { background-color: #a39e2d; }
-
-        .running-ticker {
-            background: #000;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.25);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            overflow: hidden;
-            white-space: nowrap;
-            z-index: 95;
-        }
-        .ticker-title {
-            background: var(--gradient-primary-dark);
-            padding: 6px 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            font-size: 0.78rem;
-        }
-        .ticker-window {
-            overflow: hidden;
-            flex: 1;
-        }
-        .ticker-track {
-            display: inline-flex;
-            gap: 40px;
-            padding: 8px 0;
-            animation: ticker-move 30s linear infinite;
-        }
-        .ticker-item {
-            font-size: 0.78rem;
-            color: var(--color-text-light);
-        }
-        .ticker-badge {
-            background: rgba(255, 215, 0, 0.15);
-            border: 1px solid rgba(255, 215, 0, 0.5);
-            border-radius: 4px;
-            padding: 1px 5px;
-            font-size: 0.65rem;
-            margin-right: 6px;
-        }
-
-        .hero {
-            padding: 60px 0;
-            text-align: center;
-            background: var(--gradient-hero-bg);
-            position: relative;
-            overflow: hidden;
-        }
-        #slideshow-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 5;
-        }
-        .slide-image {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            z-index: 1;
-        }
-        .slide-image.active { opacity: 1; }
-        .hero .container {
-            position: relative;
-            z-index: 15;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-        }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3em;
-            font-weight: 900;
-            color: var(--color-primary);
-            margin-bottom: 10px;
-            text-shadow: 0 0 25px var(--color-glow), 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-        .hero p {
-            font-size: 1.2em;
-            color: var(--color-text-medium);
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-        }
-        .cta-button-lg {
-            display: inline-block;
-            background: var(--gradient-primary-dark);
-            color: var(--color-text-light);
-            padding: 10px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1em;
-            border: 2px solid var(--color-primary);
-            animation: glow-blink 2.5s infinite alternate, scale-pulse 2.5s infinite alternate;
-            text-transform: uppercase;
-        }
-        .cta-button-lg:hover {
-            background: linear-gradient(to left, #FFD700, #b39b00);
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 30px var(--color-glow);
-            animation: none;
-            border: 2px solid var(--color-bg-dark);
-        }
-        .stats-bar {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px 0;
-            margin-top: 40px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .stat-item {
-            color: var(--color-primary);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5em;
-            font-weight: 900;
-            text-shadow: 0 0 8px var(--color-glow-soft);
-            white-space: nowrap;
-        }
-
-        .predictions {
-            background-color: rgba(10, 10, 10, 0.95);
-            padding-top: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-        .predictions::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent 0%, var(--color-shimmer) 25%, transparent 50%);
-            transform: skewX(-25deg) translateX(-100%);
-            pointer-events: none;
-            animation: shimmer 12s infinite linear;
-            z-index: 0;
-            will-change: transform;
-        }
-        .predictions .container > * { position: relative; z-index: 1; }
-        .main-match-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.4em;
-            font-weight: 900;
-            color: var(--color-primary);
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: title-glow-blink 0.5s infinite alternate;
-        }
-        .section-tagline {
-            font-size: 1.1em;
-            font-weight: 700;
-            color: var(--color-secondary);
-            text-align: center;
-            margin-bottom: 40px;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        }
-        .match-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            padding: 0;
-            position: relative;
-        }
-        .match-card {
-            background-color: var(--color-card-bg-transparent);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid transparent;
-            position: relative;
-            overflow: hidden;
-            z-index: 2;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-            animation: card-glow-pulse 4s infinite alternate ease-in-out;
-            will-change: transform, box-shadow;
-        }
-        .match-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 50px var(--color-glow), 0 8px 15px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 215, 0, 0.5);
-        }
-        .match-card p,
-        .match-card .match-teams-wrapper,
-        .match-card .score-prediction,
-        .match-card .detail-link { position: relative; z-index: 6; }
-        .match-teams-wrapper {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            margin: 15px 0 10px 0;
-            width: 100%;
-        }
-        .team-unit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 35%;
-        }
-        .team-unit img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
-            margin-bottom: 5px;
-        }
-        .team-name {
-            font-size: 0.9em;
-            font-weight: 700;
-            text-align: center;
-            color: var(--color-text-light);
-            line-height: 1.2;
-        }
-        .vs-text {
-            font-size: 2em;
-            color: var(--color-primary);
-            font-weight: 900;
-            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
-            margin-top: 15px;
-        }
-        .score-prediction {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.1em;
-            font-weight: 900;
-            color: var(--color-primary);
-            margin: 15px 0 10px 0;
-            border: 2px solid var(--color-primary);
-            padding: 5px 10px;
-            display: inline-block;
-            line-height: 1;
-            box-shadow: 0 0 18px var(--color-primary);
-        }
-        .detail-link {
-            display: block;
-            background: var(--gradient-secondary-dark);
-            color: var(--color-text-light);
-            padding: 10px;
-            margin: 15px auto 5px auto;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        .detail-link:hover {
-            background: linear-gradient(to left, #c0bb33, #a39e2d);
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px var(--color-secondary);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.95);
-            padding-top: 50px;
-        }
-        .modal-content {
-            background-color: #2c2c2c;
-            margin: 5% auto;
-            padding: 30px;
-            border: none;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.8);
-            max-width: 600px;
-            text-align: left;
-        }
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 2px solid transparent;
-            border-radius: 10px;
-            background: var(--gradient-modal-border) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-        .modal-info-box {
-            background-color: #242424;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            text-align: left;
-            border: 1px solid rgba(192, 187, 51, 0.3);
-            box-shadow: inset 0 0 5px rgba(192, 187, 51, 0.2);
-        }
-        .reco-box {
-            background: var(--gradient-secondary-dark);
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: var(--color-text-light);
-            font-weight: 900;
-            font-size: 1.1em;
-            margin-top: 10px !important;
-            box-shadow: 0 0 15px rgba(192, 187, 51, 0.5);
-            text-align: left;
-        }
-        .close-button {
-            color: var(--color-text-medium);
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .close-button:hover,
-        .close-button:focus {
-            color: var(--color-primary);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        footer {
-            background: var(--gradient-footer-bg);
-            padding: 30px 0;
-            color: #666;
-            font-size: 0.8em;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
-            margin-bottom: 15px;
-        }
-        .footer-col h4 {
-            color: var(--color-primary);
-            font-size: 1em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
-        }
-        .footer-col a {
-            display: block;
-            color: #aaa;
-            text-decoration: none;
-            margin-bottom: 8px;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
-        .footer-col a:hover { color: var(--color-primary); }
-
-        .social-links { display: flex; flex-direction: column; gap: 8px; }
-        .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 10px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.85em;
-            background: rgba(255, 255, 255, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .social-links a.whatsapp { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); }
-        .social-links a.telegram { background: linear-gradient(135deg, #1E96FC 0%, #0F71C6 100%); }
-        .social-links a.instagram { background: linear-gradient(135deg, #F56040 0%, #E1306C 50%, #5851DB 100%); }
-        .social-links a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 0 10px var(--color-glow-soft);
-        }
-
-        .floating-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            background: rgba(0, 0, 0, 0.98);
-            padding: 10px;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.8);
-            text-align: center;
-        }
-        .floating-cta .cta-button-lg {
-            width: 95%;
-            padding: 12px;
-            font-size: 1em;
-            border: 2px solid var(--color-primary);
-        }
-
-        .floating-event-wrapper {
-            position: fixed;
-            right: 20px;
-            bottom: 90px;
-            width: 320px;
-            z-index: 999;
-            font-family: 'Roboto', sans-serif;
-        }
-        .floating-event-box {
-            position: relative;
-            background: #000;
-            border: 1px solid rgba(255, 215, 0, 0.35);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 15px rgba(255, 215, 0, 0.5);
-        }
-        .floating-event-box img { width: 100%; display: block; }
-        .floating-event-meta {
-            position: absolute;
-            bottom: 6px;
-            left: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .floating-event-meta span {
-            background: rgba(0,0,0,0.4);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-        }
-        .floating-event-btn {
-            background: var(--gradient-primary-dark);
-            color: #000;
-            font-weight: 700;
-            border: none;
-            border-radius: 4px;
-            padding: 4px 10px;
-            font-size: 0.7rem;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .floating-event-close {
-            position: absolute;
-            top: 6px;
-            right: 6px;
-            background: rgba(0,0,0,0.45);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #fff;
-            width: 18px;
-            height: 18px;
-            font-size: 0.6rem;
-            line-height: 16px;
-            text-align: center;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        @media (max-width: 992px) {
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .match-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2em; }
-            .auth-buttons { display: none; }
-            .floating-cta { display: block; }
-            .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .social-links a { justify-content: center; }
-            .floating-event-wrapper {
-                right: 10px;
-                bottom: 80px;
-                width: 85vw;
-                max-width: 360px;
-            }
-            .running-ticker { flex-wrap: wrap; }
-            .ticker-title { width: 100%; justify-content: center; }
-            .ticker-track { animation-duration: 40s; }
+        @keyframes shimmer {0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+        @keyframes card-glow-pulse {0%{box-shadow:0 0 5px rgba(255,215,0,0.3),0 0 10px rgba(0,0,0,0.7)}50%{box-shadow:0 0 15px var(--color-glow),0 0 25px rgba(255,215,0,0.5)}100%{box-shadow:0 0 5px rgba(255,215,0,0.3),0 0 10px rgba(0,0,0,0.7)}}
+        @keyframes glow-blink {0%,100%{box-shadow:0 0 10px var(--color-glow-soft),0 0 20px rgba(255,215,0,0.2),0 0 30px rgba(0,0,0,0.5)}50%{box-shadow:0 0 25px var(--color-glow),0 0 40px rgba(255,215,0,0.5),0 0 50px rgba(255,215,0,0.3)}}
+        @keyframes scale-pulse {0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+        @keyframes title-glow-blink {0%,100%{text-shadow:0 0 10px rgba(255,215,0,0.5),0 0 5px rgba(255,255,255,0.3)}50%{text-shadow:0 0 30px var(--color-primary),0 0 15px rgba(255,255,255,0.7)}}
+        @keyframes ticker-move {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        body {font-family:'Roboto',sans-serif;margin:0;padding:0;background-color:var(--color-bg-dark);color:var(--color-text-light);line-height:1.6;}
+        .container {width:95%;max-width:1200px;margin:0 auto;padding:0 0 40px 0;position:relative;z-index:2;}
+        header {background:var(--gradient-footer-bg);padding:15px 0;position:relative;text-align:center;z-index:100;}
+        header::after {content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gradient-header-border);}
+        .logo-nav {display:flex;justify-content:space-between;align-items:center;width:95%;max-width:1200px;margin:0 auto;}
+        .logo {display:flex;align-items:center;}
+        .logo img {height:35px;margin-right:10px;}
+        .logo-text {font-family:'Montserrat',sans-serif;font-size:1.6em;font-weight:900;color:var(--color-text-light);text-shadow:0 0 8px var(--color-glow-soft);}
+        .auth-buttons a {color:var(--color-text-light);text-decoration:none;padding:8px 15px;margin-left:10px;border-radius:4px;font-size:0.9em;}
+        .auth-buttons .login {background-color:#333;}
+        .auth-buttons .register {background-color:var(--color-secondary);}
+        .running-ticker {background:#000;border-bottom:1px solid rgba(255,215,0,0.25);display:flex;align-items:center;gap:12px;overflow:hidden;white-space:nowrap;z-index:95;}
+        .ticker-title {background:var(--gradient-primary-dark);padding:6px 14px;font-weight:700;display:flex;align-items:center;gap:6px;text-transform:uppercase;font-size:0.78rem;}
+        .ticker-window {overflow:hidden;flex:1;}
+        .ticker-track {display:inline-flex;gap:40px;padding:8px 0;animation:ticker-move 30s linear infinite;}
+        .ticker-item {font-size:0.78rem;color:var(--color-text-light);}
+        .ticker-badge {background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.5);border-radius:4px;padding:1px 5px;font-size:0.65rem;margin-right:6px;}
+        .hero {padding:60px 0;text-align:center;background:var(--gradient-hero-bg);position:relative;overflow:hidden;}
+        #slideshow-container {position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:5;}
+        .slide-image {position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease-in-out;z-index:1;}
+        .slide-image.active {opacity:1;}
+        .hero .container {position:relative;z-index:15;background-color:rgba(0,0,0,0.7);padding:30px;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,0.9);}
+        .hero h1 {font-family:'Montserrat',sans-serif;font-size:3em;font-weight:900;color:var(--color-primary);margin-bottom:10px;text-shadow:0 0 25px var(--color-glow),0 0 10px rgba(255,255,255,0.5);}
+        .hero p {font-size:1.2em;color:var(--color-text-medium);max-width:700px;margin:0 auto 30px auto;}
+        .cta-button-lg {display:inline-block;background:var(--gradient-primary-dark);color:var(--color-text-light);padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:900;font-size:1em;border:2px solid var(--color-primary);animation:glow-blink 2.5s infinite alternate,scale-pulse 2.5s infinite alternate;text-transform:uppercase;}
+        .cta-button-lg:hover {background:linear-gradient(to left,#FFD700,#b39b00);transform:translateY(-4px) scale(1.03);box-shadow:0 10px 30px var(--color-glow);animation:none;border:2px solid var(--color-bg-dark);}
+        .stats-bar {background-color:rgba(0,0,0,0.6);padding:20px 0;margin-top:40px;border:1px solid rgba(255,215,0,0.2);box-shadow:inset 0 0 10px rgba(255,215,0,0.1);display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+        .stat-item {color:var(--color-primary);font-family:'Montserrat',sans-serif;font-size:1.5em;font-weight:900;text-shadow:0 0 8px var(--color-glow-soft);white-space:nowrap;}
+        .predictions {background-color:rgba(10,10,10,0.95);padding-top:40px;position:relative;overflow:hidden;}
+        .predictions::after {content:'';position:absolute;top:0;left:0;width:200%;height:100%;background:linear-gradient(90deg,transparent 0%,var(--color-shimmer) 25%,transparent 50%);transform:skewX(-25deg) translateX(-100%);pointer-events:none;animation:shimmer 12s infinite linear;z-index:0;will-change:transform;}
+        .predictions .container>* {position:relative;z-index:1;}
+        .main-match-title {font-family:'Montserrat',sans-serif;font-size:2.4em;font-weight:900;color:var(--color-primary);text-align:center;margin-top:30px;margin-bottom:5px;letter-spacing:2px;text-transform:uppercase;animation:title-glow-blink 0.5s infinite alternate;}
+        .section-tagline {font-size:1.1em;font-weight:700;color:var(--color-secondary);text-align:center;margin-bottom:40px;text-shadow:0 0 5px rgba(0,0,0,0.5);}
+        .match-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;justify-content:center;}
+        .match-card {background-color:var(--color-card-bg-transparent);padding:20px;border-radius:8px;text-align:center;border:1px solid transparent;position:relative;overflow:hidden;z-index:2;transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;animation:card-glow-pulse 4s infinite alternate ease-in-out;}
+        .match-card:hover {transform:translateY(-5px);box-shadow:0 0 50px var(--color-glow),0 8px 15px rgba(0,0,0,0.8),inset 0 0 20px rgba(255,215,0,0.5);}
+        .match-card p,.match-card .match-teams-wrapper,.match-card .score-prediction,.match-card .detail-link {position:relative;z-index:6;}
+        .match-league-line {color:var(--color-primary);font-weight:700;font-size:0.8rem;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:4px;}
+        .match-time-line {color:#fff;font-size:0.78rem;margin-bottom:8px;}
+        .match-teams-wrapper {display:flex;justify-content:space-around;align-items:flex-start;margin:15px 0 10px 0;width:100%;}
+        .team-unit {display:flex;flex-direction:column;align-items:center;width:35%;}
+        .team-unit img {width:50px;height:50px;object-fit:contain;filter:drop-shadow(0 0 5px rgba(255,255,255,0.2));margin-bottom:5px;}
+        .team-name {font-size:0.9em;font-weight:700;text-align:center;color:var(--color-text-light);line-height:1.2;}
+        .vs-text {font-size:2em;color:var(--color-primary);font-weight:900;text-shadow:0 0 5px rgba(255,215,0,0.3);margin-top:15px;}
+        .score-prediction {font-family:'Montserrat',sans-serif;font-size:2.1em;font-weight:900;color:var(--color-primary);margin:15px 0 10px 0;border:2px solid var(--color-primary);padding:5px 10px;display:inline-block;line-height:1;box-shadow:0 0 18px var(--color-primary);}
+        .match-score-caption {color:#fff;font-size:0.9em;margin-bottom:0;}
+        .detail-link {display:block;background:var(--gradient-secondary-dark);color:var(--color-text-light);padding:10px;margin:15px auto 5px auto;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.9em;transition:all 0.3s ease;text-transform:uppercase;box-shadow:0 2px 10px rgba(0,0,0,0.5);}
+        .detail-link:hover {background:linear-gradient(to left,#c0bb33,#a39e2d);transform:translateY(-2px);box-shadow:0 0 15px var(--color-secondary);}
+        .modal {display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.95);padding-top:50px;}
+        .modal-content {background-color:#2c2c2c;margin:5% auto;padding:30px;border:none;border-radius:10px;position:relative;box-shadow:0 0 40px rgba(255,215,0,0.4),0 0 30px rgba(0,0,0,0.8);max-width:600px;text-align:left;}
+        .modal-content::before {content:'';position:absolute;inset:0;border:2px solid transparent;border-radius:10px;background:var(--gradient-modal-border) border-box;-webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;}
+        .modal-info-box {background-color:#242424;padding:15px;margin:15px 0;border-radius:5px;text-align:left;border:1px solid rgba(192,187,51,0.3);box-shadow:inset 0 0 5px rgba(192,187,51,0.2);}
+        .reco-box {background:var(--gradient-secondary-dark);padding:10px 15px;border-radius:5px;color:var(--color-text-light);font-weight:900;font-size:1.1em;margin-top:10px !important;box-shadow:0 0 15px rgba(192,187,51,0.5);text-align:left;}
+        .close-button {color:var(--color-text-medium);position:absolute;top:15px;right:25px;font-size:35px;font-weight:bold;transition:0.3s;}
+        .close-button:hover {color:var(--color-primary);cursor:pointer;}
+        footer {background:var(--gradient-footer-bg);padding:30px 0;color:#666;font-size:0.8em;}
+        .footer-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:20px;border-bottom:1px solid #333;margin-bottom:15px;}
+        .footer-col h4 {color:var(--color-primary);font-size:1em;margin-bottom:15px;text-shadow:0 0 5px rgba(255,215,0,0.2);}
+        .footer-col a {display:block;color:#aaa;text-decoration:none;margin-bottom:8px;font-size:0.9em;}
+        .social-links {display:flex;flex-direction:column;gap:8px;}
+        .social-links a {display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;text-decoration:none;color:#fff;font-size:0.85em;background:rgba(255,255,255,0.02);}
+        .floating-cta {display:none;position:fixed;bottom:0;left:0;width:100%;z-index:100;background:rgba(0,0,0,0.98);padding:10px;box-shadow:0 -4px 15px rgba(0,0,0,0.8);text-align:center;}
+        .floating-cta .cta-button-lg {width:95%;padding:12px;font-size:1em;border:2px solid var(--color-primary);}
+        .floating-event-wrapper {position:fixed;right:20px;bottom:90px;width:320px;z-index:999;font-family:'Roboto',sans-serif;}
+        .floating-event-box {position:relative;background:#000;border:1px solid rgba(255,215,0,0.35);border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6),0 0 15px rgba(255,215,0,0.5);}
+        .floating-event-box img {width:100%;display:block;}
+        .floating-event-meta {position:absolute;bottom:6px;left:10px;right:10px;display:flex;justify-content:space-between;align-items:center;}
+        .floating-event-meta span {background:rgba(0,0,0,0.4);padding:3px 8px;border-radius:4px;font-size:0.7rem;}
+        .floating-event-btn {background:var(--gradient-primary-dark);color:#000;font-weight:700;border:none;border-radius:4px;padding:4px 10px;font-size:0.7rem;text-decoration:none;}
+        .floating-event-close {position:absolute;top:6px;right:6px;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.15);color:#fff;width:18px;height:18px;font-size:0.6rem;line-height:16px;text-align:center;border-radius:50%;cursor:pointer;}
+        @media (max-width:992px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+        @media (max-width:768px){
+            .match-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+            .hero h1{font-size:2.2em;}
+            .auth-buttons{display:none;}
+            .floating-cta{display:block;}
+            .footer-grid{grid-template-columns:1fr;text-align:center;}
+            .social-links a{justify-content:center;}
+            .floating-event-wrapper{right:10px;bottom:80px;width:85vw;max-width:360px;}
+            .running-ticker{flex-wrap:wrap;}
+            .ticker-title{width:100%;justify-content:center;}
+            .ticker-track{animation-duration:40s;}
+        }
+        @media (max-width:480px){
+            .match-grid{grid-template-columns:1fr;}
+            .match-card{padding:16px 14px;}
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="logo-nav">
             <div class="logo">
@@ -628,9 +142,7 @@
     </header>
 
     <div class="running-ticker" id="runningTicker">
-        <div class="ticker-title">
-            <i class="fas fa-futbol"></i> Jadwal Bola Selanjutnya
-        </div>
+        <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Bola Selanjutnya</div>
         <div class="ticker-window">
             <div class="ticker-track" id="tickerTrack">
                 <span class="ticker-item"><span class="ticker-badge">INFO</span> Memuat jadwal pertandingan...</span>
@@ -658,7 +170,7 @@
             <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI!</h1>
             <p class="section-tagline">12 Analisis Terbaik Siap Bawa Kemenangan Malam Ini!</p>
             <div class="match-grid" id="match-container">
-                <p style="grid-column: 1 / -1; color: var(--color-primary);">Memuat 12 Prediksi Utama...</p>
+                <p style="grid-column:1 / -1; color:var(--color-primary);">Memuat 12 Prediksi Utama...</p>
             </div>
         </div>
     </section>
@@ -668,33 +180,28 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>LIVEBET303</h4>
-                    <p style="color: #aaa;">RAJA PREDIKSI adalah portal eksklusif dari LIVEBET303 untuk memberikan analisis dan prediksi skor pertandingan sepak bola paling akurat hari ini.</p>
-                    <div class="social-links" style="margin-top: 10px;">
+                    <p style="color:#aaa;">RAJA PREDIKSI adalah portal eksklusif dari LIVEBET303 untuk memberikan analisis dan prediksi skor pertandingan sepak bola paling akurat hari ini.</p>
+                    <div class="social-links" style="margin-top:10px;">
                         <a href="https://cutt.ly/wa3livebet303" target="_blank" class="whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp Official Livebet303</span>
+                            <i class="fab fa-whatsapp"></i><span>WhatsApp Official Livebet303</span>
                         </a>
                         <a href="https://t.me/komunitas_livebet303" target="_blank" class="telegram">
-                            <i class="fab fa-telegram"></i>
-                            <span>Komunitas Telegram</span>
+                            <i class="fab fa-telegram"></i><span>Komunitas Telegram</span>
                         </a>
                         <a href="https://instagram.com/ZonaBolaID_" target="_blank" class="instagram">
-                            <i class="fab fa-instagram"></i>
-                            <span>Instagram Official @ZonaBolaID_</span>
+                            <i class="fab fa-instagram"></i><span>Instagram Official @ZonaBolaID_</span>
                         </a>
                     </div>
                 </div>
-
                 <div class="footer-col">
                     <h4>LAYANAN PELANGGAN</h4>
                     <a href="https://direct.lc.chat/13309137/" target="_blank">Live Chat 24/7</a>
                     <a href="#">Hubungi Kami</a>
-                    <p style="color: var(--color-primary); margin-top: 10px;">CS ON: 24 Jam Nonstop</p>
+                    <p style="color:var(--color-primary); margin-top:10px;">CS ON: 24 Jam Nonstop</p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Disclaimer</h4>
-                    <p style="color: #aaa;">Semua prediksi adalah hasil analisis dan tidak menjamin kemenangan 100%. Bertaruhlah dengan bijak dan bertanggung jawab.</p>
+                    <p style="color:#aaa;">Semua prediksi adalah hasil analisis dan tidak menjamin kemenangan 100%. Bertaruhlah dengan bijak dan bertanggung jawab.</p>
                 </div>
             </div>
             <div class="responsible-gambling">
@@ -741,7 +248,6 @@
         ];
         let currentSlide = 0;
         let slideInterval;
-
         function renderSlides() {
             const container = document.getElementById('slideshow-container');
             if (!container) return;
@@ -750,7 +256,6 @@
                 const slide = document.createElement('div');
                 slide.className = 'slide-image';
                 slide.style.backgroundImage = `url('${url}')`;
-                slide.setAttribute('data-index', index);
                 if (index === 0) slide.classList.add('active');
                 container.appendChild(slide);
             });
@@ -772,10 +277,10 @@
         };
         const UPCOMING_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vScZPyJaNlifvm148a2F6SlUpxWwtFR-w6T1xfBA8nCMQuJHI4hNjao1TRHD0b1dRjBpbW_0sXQCMKZ/pub?gid=1071168271&single=true&output=csv';
 
-        const DUMMY_DATA = ["Liga", "BIG MATCH HARI INI", "00:30", "TIM KANDANG", "TIM TANDANG", "50", "50", "Analisis segera hadir...", "2 - 1", "3-0-2", "Over 2.5", "TIM KANDANG -0.5"];
+        const DUMMY_DATA = ["Liga", "BIG MATCH HARI INI", "00:30", "TIM KANDANG", "TIM TANDANG", "50", "50", "Analisis segera hadir...", "2 - 1", "3-0-2", "Over 2.5", "TIM KANDANG -0.5", "", ""];
         const DUMMY_UPCOMING = [
-            { date: '20 NOV', time: '20:00', league: 'EPL', home: 'CHELSEA', away: 'LIVERPOOL' },
-            { date: '20 NOV', time: '22:30', league: 'SERIE A', home: 'JUVENTUS', away: 'MILAN' }
+            { league: 'EPL', date: '20-Nov-25', time: '20:00', home: 'CHELSEA', away: 'LIVERPOOL' },
+            { league: 'SERIE A', date: '20-Nov-25', time: '22:30', home: 'JUVENTUS', away: 'MILAN' }
         ];
 
         let MATCH_DATA_CACHE = {};
@@ -789,8 +294,9 @@
             "LIVERPOOL": "https://i.postimg.cc/0QcbmcWq/Liverpool.png",
             "MANCHESTER CITY": "https://i.postimg.cc/SKLXQycj/Manchester-City.png",
             "MANCHESTER UTD": "https://i.postimg.cc/N0K1QyvW/Manchester-United.png",
-            "BAYERN MUNCHEN": "https://i.postimg.cc/c4d3P59g/Bayern-Munchen.png",
+            "BAYERN MUNCHEN": "https://i.postimg.cc/c4d3P59g/Bayern-Munchen.png"
         };
+
         function getLogoUrl(teamName) {
             if (!teamName) return 'https://i.postimg.cc/85z1w5GZ/default-logo.png';
             const normalizedName = teamName.trim().toUpperCase();
@@ -798,24 +304,20 @@
         }
 
         function openModal(data) {
-            const modal = document.getElementById('predictionModal');
-            modal.style.display = 'block';
+            document.getElementById('predictionModal').style.display = 'block';
             populateModal(data);
         }
         function closeModal() {
-            const modal = document.getElementById('predictionModal');
-            modal.style.display = 'none';
+            document.getElementById('predictionModal').style.display = 'none';
         }
         function populateModal(data) {
             const safeData = Array.isArray(data) ? data : [];
             const [liga, judul, waktu, timKandang, timTandang, probKandang, probTandang, analisis, prediksiSkor, h2h, pasarOU, rekomendasi] =
                 new Array(12).fill('').map((_, i) => safeData[i] || '');
-
             let h2hK = '?', h2hS = '?', h2hT = '?';
             if (h2h && typeof h2h === 'string' && h2h.includes('-')) {
                 [h2hK, h2hS, h2hT] = h2h.split('-');
             }
-
             const modalTitle = document.getElementById('modal-title');
             const modalBody = document.getElementById('modal-body');
             modalTitle.innerHTML = `DETAIL ANALISIS PARLAY: <span style="color:var(--color-secondary)">${timKandang || 'TIM'} vs ${timTandang || 'TIM'}</span>`;
@@ -845,50 +347,47 @@
         }
 
         function createMatchCard(data, index) {
-            const liga = data[0];
-            const judul = data[1];
-            const waktu = data[2];
-            const timKandang = data[3];
-            const timTandang = data[4];
-            const analisis = data[7];
-            const prediksiSkor = data[8];
-            const h2h = data[9];
-            const pasarOU = data[10];
-            const rekomendasi = data[11];
-            const logoKandangSheet = data[12] && data[12].startsWith('http') ? data[12] : null;
-            const logoTandangSheet = data[13] && data[13].startsWith('http') ? data[13] : null;
-
-            const [skorKandang, skorTandang] = prediksiSkor ? prediksiSkor.split(' - ').map(s => s.trim()) : ['?', '?'];
+            const liga = data[0] || '-';
+            const judul = data[1] || '';
+            const waktu = data[2] || '';
+            const timKandang = data[3] || 'HOME';
+            const timTandang = data[4] || 'AWAY';
+            const prediksiSkor = data[8] || '? - ?';
+            const sheetHomeLogo = data[12] ? data[12].trim() : '';
+            const sheetAwayLogo = data[13] ? data[13].trim() : '';
+            const homeLogo = sheetHomeLogo || getLogoUrl(timKandang);
+            const awayLogo = sheetAwayLogo || getLogoUrl(timTandang);
+            const [skorKandang, skorTandang] = prediksiSkor.includes('-')
+                ? prediksiSkor.split('-').map(s => s.trim())
+                : ['?', '?'];
 
             const card = document.createElement('div');
             card.className = 'match-card';
-            card.style.setProperty('--index', index);
             card.innerHTML = `
-                <p style="color: var(--color-primary); font-weight: 700; margin-bottom: 3px;">${liga || '-'}</p>
-                <p style="color: #ffffff; font-size: 0.85rem; margin-top: 0;">${waktu || '--:--'} WIB</p>
+                <div class="match-league-line">${liga}</div>
+                <div class="match-time-line">${waktu ? waktu.replace(/AM|PM/gi,'').trim() + ' WIB' : '--:-- WIB'}</div>
                 <div class="match-teams-wrapper">
                     <div class="team-unit">
-                        <img src="${logoKandangSheet || getLogoUrl(timKandang)}" alt="Logo ${timKandang}">
-                        <span class="team-name">${timKandang || 'HOME'}</span>
+                        <img src="${homeLogo}" alt="Logo ${timKandang}" onerror="this.onerror=null;this.src='https://i.postimg.cc/85z1w5GZ/default-logo.png';">
+                        <span class="team-name">${timKandang}</span>
                     </div>
                     <span class="vs-text">vs</span>
                     <div class="team-unit">
-                        <img src="${logoTandangSheet || getLogoUrl(timTandang)}" alt="Logo ${timTandang}">
-                        <span class="team-name">${timTandang || 'AWAY'}</span>
+                        <img src="${awayLogo}" alt="Logo ${timTandang}" onerror="this.onerror=null;this.src='https://i.postimg.cc/85z1w5GZ/default-logo.png';">
+                        <span class="team-name">${timTandang}</span>
                     </div>
                 </div>
                 <div class="score-prediction">${skorKandang} - ${skorTandang}</div>
-                <p style="color: #ffffff; font-size: 0.9em; margin-bottom: 0;">PERKIRAAN SKOR AKHIR</p>
+                <p class="match-score-caption">PERKIRAAN SKOR AKHIR</p>
                 <a href="#" class="detail-link" data-match-index="${index}">LIHAT DETAIL ANALISIS</a>
             `;
-            const detailLink = card.querySelector('.detail-link');
-            detailLink.addEventListener('click', (e) => {
+            card.querySelector('.detail-link').addEventListener('click', (e) => {
                 e.preventDefault();
-                const matchIndex = e.target.getAttribute('data-match-index');
-                openModal(MATCH_DATA_CACHE[CURRENT_LEAGUE][matchIndex]);
+                openModal(MATCH_DATA_CACHE[CURRENT_LEAGUE][index]);
             });
             return card;
         }
+
         function renderMatches(dataArray, container) {
             container.innerHTML = '';
             dataArray.slice(0, 12).forEach((rowData, index) => {
@@ -905,7 +404,7 @@
             const csvRegex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
             dataRows.forEach(row => {
                 const cells = row.split(csvRegex).map(cell => cell.trim().replace(/^"|"$/g, ''));
-                if (cells.length >= 12 && cells[3].trim() !== '') {
+                if (cells[3] && cells[3].trim() !== '') {
                     dataArray.push(cells);
                 }
             });
@@ -923,7 +422,7 @@
 
             if (MATCH_DATA_CACHE[leagueKey]) {
                 dataArray = MATCH_DATA_CACHE[leagueKey];
-                currentCount = dataArray.filter(d => d !== DUMMY_DATA).length;
+                currentCount = dataArray.length;
             } else {
                 try {
                     const response = await fetch(url);
@@ -931,12 +430,8 @@
                         const csvText = await response.text();
                         dataArray = parseCSV(csvText);
                         currentCount = dataArray.length;
-                    } else {
-                        console.warn(`Gagal memuat data dari sheet (${response.status}) untuk ${leagueKey}. Menggunakan data dummy.`);
                     }
-                } catch (error) {
-                    console.error(`Kesalahan saat memuat data ${leagueKey}:`, error);
-                }
+                } catch (error) {}
             }
 
             const remainingSlots = 12 - dataArray.length;
@@ -959,55 +454,36 @@
             }
         }
 
-        function normalizeDateToShort(dateStr) {
-            if (!dateStr) return '';
-            const d = new Date(dateStr);
-            if (!isNaN(d.getTime())) {
-                const day = d.getDate().toString().padStart(2, '0');
-                const monthNames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-                const month = monthNames[d.getMonth()];
-                return `${day} ${month}`;
+        function formatDateTicker(raw) {
+            if (!raw) return '';
+            if (/^\d{1,2}:\d{2}/.test(raw)) return '';
+            const parts = raw.split('-');
+            if (parts.length === 3) {
+                return parts[0] + ' ' + parts[1];
             }
-            const parts = dateStr.split('-');
-            if (parts.length >= 2) {
-                const day = parts[0].padStart(2, '0');
-                const shortMonth = parts[1].slice(0,3).toUpperCase();
-                return `${day} ${shortMonth}`;
-            }
-            return dateStr;
+            return raw;
         }
-
-        function normalizeTimeToWIB(timeStr) {
-            if (!timeStr) return '';
-            let t = timeStr.trim();
-            if (t.includes(' ')) {
-                const tt = t.split(' ')[0];
-                t = tt;
-            }
-            if (t.includes(':')) {
-                const parts = t.split(':');
-                t = `${parts[0].padStart(2,'0')}:${parts[1].padStart(2,'0')}`;
-            }
-            return `${t} WIB`;
+        function normalizeTimeToWIB(t) {
+            if (!t) return '';
+            let time = t.trim();
+            time = time.replace(/AM|PM/gi,'').trim();
+            return time + ' WIB';
         }
 
         async function loadUpcomingTicker() {
             const track = document.getElementById('tickerTrack');
             let items = [];
-
             try {
                 const res = await fetch(UPCOMING_URL);
                 if (res.ok) {
                     const csvText = await res.text();
                     const rows = csvText.trim().split('\n').slice(1);
                     const csvRegex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
-
                     rows.forEach(row => {
                         const cells = row.split(csvRegex).map(c => c.trim().replace(/^"|"$/g, ''));
                         if (cells.length >= 6 && cells[4]) {
                             items.push({
                                 league: cells[0] || '',
-                                title: cells[1] || '',
                                 date: cells[2] || '',
                                 time: cells[3] || '',
                                 home: cells[4] || '',
@@ -1016,55 +492,31 @@
                         }
                     });
                 }
-            } catch (err) {
-                console.warn('Gagal ambil upcoming, pakai dummy', err);
-            }
+            } catch (err) {}
 
             if (!items.length) {
-                items = DUMMY_UPCOMING.map(it => ({
-                    league: it.league,
-                    date: it.date,
-                    time: it.time,
-                    home: it.home,
-                    away: it.away
-                }));
+                items = DUMMY_UPCOMING;
             }
 
             track.innerHTML = '';
             const doubled = items.concat(items);
-            doubled.forEach(data => {
+            doubled.forEach(d => {
                 const span = document.createElement('span');
                 span.className = 'ticker-item';
-                const leagueBadge = data.league ? `<span class="ticker-badge">${data.league}</span>` : '';
-                const formattedDate = normalizeDateToShort(data.date);
-                const formattedTime = normalizeTimeToWIB(data.time);
-                const dateTimePart = formattedDate ? `${formattedDate} | ${formattedTime}` : formattedTime;
-                span.innerHTML = `${leagueBadge}${dateTimePart} — ${(data.home || 'TBA')} vs ${(data.away || 'TBA')}`;
+                const leagueBadge = d.league ? `<span class="ticker-badge">${d.league}</span>` : '';
+                const datePart = formatDateTicker(d.date);
+                const timePart = normalizeTimeToWIB(d.time);
+                const mid = datePart ? `${datePart} | ${timePart}` : timePart;
+                span.innerHTML = `${leagueBadge}${mid} — ${d.home || 'TBA'} vs ${d.away || 'TBA'}`;
                 track.appendChild(span);
             });
         }
 
         const EVENT_PROMOS = [
-            {
-                title: 'Event Tebak Score Spesial',
-                img: 'https://i.ibb.co/pjRZ2L1R/EVENT-TEBAK-SCORE-SPESIAL-MATCH.webp',
-                link: 'https://t.me/cslivebet303'
-            },
-            {
-                title: 'Bonus Spesial Sportbook',
-                img: 'https://i.ibb.co/239f2gnv/BONUS-SPESIAL-SPORTBOOK-AKHIR-PEKAN.webp',
-                link: 'https://2livebet303.work'
-            },
-            {
-                title: 'Gas Full Parlay',
-                img: 'https://i.ibb.co/n8jCV7HS/GAS-FULL-PARLAY.webp',
-                link: 'https://t.me/cslivebet303'
-            },
-            {
-                title: 'Cashback Sportbook 20%',
-                img: 'https://i.ibb.co/tp8Ktg5B/51-d50f5ba20643494f89ac96618af28dbf.webp',
-                link: 'https://t.me/cslivebet303'
-            }
+            {title:'Event Tebak Score Spesial',img:'https://i.ibb.co/pjRZ2L1R/EVENT-TEBAK-SCORE-SPESIAL-MATCH.webp',link:'https://t.me/cslivebet303'},
+            {title:'Bonus Spesial Sportbook',img:'https://i.ibb.co/239f2gnv/BONUS-SPESIAL-SPORTBOOK-AKHIR-PEKAN.webp',link:'https://2livebet303.work'},
+            {title:'Gas Full Parlay',img:'https://i.ibb.co/n8jCV7HS/GAS-FULL-PARLAY.webp',link:'https://t.me/cslivebet303'},
+            {title:'Cashback Sportbook 20%',img:'https://i.ibb.co/tp8Ktg5B/51-d50f5ba20643494f89ac96618af28dbf.webp',link:'https://t.me/cslivebet303'}
         ];
         const promoImgEl = document.getElementById('eventPromoImg');
         const promoTitleEl = document.getElementById('eventPromoTitle');
