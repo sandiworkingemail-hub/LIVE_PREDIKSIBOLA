@@ -311,11 +311,13 @@
         }
         
         .score-box-v2 .score-prediction {
-            font-size: 1.8rem;
+            /* >>> PERUBAHAN UKURAN SKOR DI SINI <<< */
+            font-size: 1.6rem; /* Lebih kecil dari 1.8rem */
+            padding: 4px 8px; /* Lebih kecil dari 5px 10px */
+            /* >>> AKHIR PERUBAHAN UKURAN SKOR <<< */
             font-weight: 900;
             color: var(--color-primary);
             background: var(--color-v2-score);
-            padding: 5px 10px;
             border-radius: 4px;
             border: 1px solid var(--color-primary);
         }
@@ -345,9 +347,10 @@
         .card-footer-v2 .detail-link {
             width: auto;
             margin: 0;
-            padding: 5px 10px;
+            padding: 4px 8px; 
+            font-size: 0.6rem; 
             background: var(--gradient-secondary-dark);
-            font-size: 0.65rem;
+            color: #fff; 
         }
         /* END NEW MATCH CARD V2 STYLES */
 
@@ -375,7 +378,7 @@
             text-align: center;
             text-decoration: none;
             background: var(--gradient-primary-dark);
-            color: #000; /* Warna teks hitam agar sangat kontras */
+            color: #000; 
             padding: 10px 20px;
             border-radius: 6px;
             font-weight: 900;
@@ -457,7 +460,11 @@
             /* Penyesuaian V2 Mobile */
             .team-info-v2 img {width: 45px; height: 45px;}
             .team-info-v2 .team-name {font-size: 0.75rem;}
-            .score-box-v2 .score-prediction {font-size: 1.4rem;}
+            /* Penyesuaian Skor Mobile */
+            .score-box-v2 .score-prediction {
+                font-size: 1.3rem; /* Lebih kecil lagi di mobile */
+                padding: 3px 6px;
+            }
 
             /* Penyesuaian Modal Mobile */
             .modal-cta-button {
@@ -487,7 +494,7 @@
 
     <div class="running-ticker" id="runningTicker">
         <div class="ticker-content">
-            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Match Lengkap</div>
+            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Bola Selanjutnya</div>
             <div class="ticker-window">
                 <div class="ticker-track" id="tickerTrack">
                     <div class="ticker-track-inner">
@@ -515,7 +522,7 @@
 
     <section class="predictions" id="predictions">
         <div class="container">
-            <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI !</h1>
+            <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI!</h1>
             <p class="section-tagline">12 Analisis Terbaik Siap Bawa Kemenangan Malam Ini!</p>
             <div class="match-grid" id="match-container">
                 <p style="grid-column:1/-1;color:var(--color-primary);font-size:0.78rem;">Memuat 12 Prediksi Utama...</p>
