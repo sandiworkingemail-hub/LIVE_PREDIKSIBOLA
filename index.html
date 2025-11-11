@@ -37,7 +37,8 @@
         @keyframes glow-blink {0%,100%{box-shadow:0 0 6px var(--color-glow-soft),0 0 12px rgba(255,215,0,0.2)}50%{box-shadow:0 0 16px var(--color-glow),0 0 24px rgba(255,215,0,0.4)}}
         @keyframes scale-pulse {0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
         @keyframes title-glow-blink {0%,100%{text-shadow:0 0 6px rgba(255,215,0,0.5)}50%{text-shadow:0 0 16px var(--color-primary)}}
-        @keyframes ticker-move {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        /* REVISI ANIMASI: Memastikan pergerakan horizontal */
+        @keyframes ticker-move {0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
         body {
             font-family:'Roboto',sans-serif;
             margin:0;
@@ -81,7 +82,6 @@
         }
         .logo {display:flex;align-items:center;gap:6px;}
         .logo img {height:30px;}
-        /* Perbaikan: Menggunakan display: none untuk menyembunyikan teks "RAJA PREDIKSI" */
         .logo-text {display: none;}
         .auth-buttons {
             display:flex;
@@ -98,15 +98,22 @@
         .auth-buttons .cs-button {background:#5cb85c;}
         .auth-buttons .login {background:#333;}
         .auth-buttons .register {background:var(--color-secondary);}
+        
+        /* REVISI CSS UNTUK RUNNING TEXT */
         .running-ticker {
             background:#000;
             border-bottom:1px solid rgba(255,215,0,0.25);
-            display:flex;
-            align-items:center;
-            gap:10px;
+            /* Ganti display: flex menjadi block agar lebih stabil di HP */
+            /* Kita akan menggunakan flexbox di div .ticker-content */
+            display: block; 
             overflow:hidden;
             white-space:nowrap;
         }
+        .ticker-content {
+            display: flex; /* Gunakan flex untuk menempatkan title dan window */
+            align-items: center;
+        }
+
         .ticker-title {
             background:var(--gradient-primary-dark);
             padding:4px 10px;
@@ -116,13 +123,25 @@
             gap:5px;
             text-transform:uppercase;
             font-size:0.68rem;
+            /* Pastikan title tidak ikut bergerak */
+            flex-shrink: 0; 
         }
-        .ticker-window {overflow:hidden;flex:1;}
+        .ticker-window {
+            overflow:hidden;
+            flex:1;
+        }
         .ticker-track {
-            display:inline-flex;
-            gap:28px;
+            /* REVISI PENTING: Menggandakan konten JS dan menggunakan lebar 200% */
+            display:inline-block;
+            width: 200%; 
             padding:6px 0;
-            animation:ticker-move 30s linear infinite;
+            /* Mengubah animasi menjadi 100% dari 50% */
+            animation:ticker-move 30s linear infinite; 
+        }
+        /* Memastikan konten di dalam track tetap horizontal */
+        .ticker-track-inner {
+             display: inline-flex;
+             gap: 28px;
         }
         .ticker-item {font-size:0.68rem;}
         .ticker-badge {
@@ -133,6 +152,8 @@
             font-size:0.6rem;
             margin-right:4px;
         }
+        /* END REVISI CSS UNTUK RUNNING TEXT */
+
         .hero {
             padding:40px 0 45px 0;
             text-align:center;
@@ -264,17 +285,17 @@
             margin:8px 0 4px 0;
         }
         .match-score-caption {color:#fff;font-size:0.68rem;margin-bottom:0;}
-.detail-link {
-    display:block;
-    width: 80%;
-    margin: 10px auto 0 auto;
-    background:var(--gradient-secondary-dark);
-    padding:7px;
-    border-radius:4px;
-    font-size:0.68rem;
-    color:#fff;
-    text-decoration:none;
-}
+        .detail-link {
+            display:block;
+            width: 80%;
+            margin: 10px auto 0 auto;
+            background:var(--gradient-secondary-dark);
+            padding:7px;
+            border-radius:4px;
+            font-size:0.68rem;
+            color:#fff;
+            text-decoration:none;
+        }
         .modal {
             display:none;
             position:fixed;
@@ -294,7 +315,6 @@
         .close-button {position:absolute;top:10px;right:16px;font-size:28px;color:#aaa;}
         footer {background:var(--gradient-footer-bg);padding:15px 0 15px 0;font-size:0.7rem;}
         .footer-grid {
-            /* Menghilangkan footer grid */
             display: none; 
         }
         .footer-col h4 {font-size:0.8rem;margin-bottom:8px;color:var(--color-primary);}
@@ -304,23 +324,21 @@
             position:fixed;right:16px;bottom:78px;width:280px;z-index:999;
         }
         .floating-event-box {
-            position: relative; /* Penting untuk posisi tombol klaim */
-            overflow: hidden; /* Menjaga tombol agar tidak keluar */
+            position: relative; 
+            overflow: hidden; 
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .floating-event-box img {width:100%; display: block;}
-        /* Sembunyikan elemen meta data yang lama */
         .floating-event-meta {display: none;}
         .responsible-gambling {
             text-align: center;
             margin-top: 0;
         }
         
-        /* Tambahkan style untuk tombol klaim baru */
         .floating-claim-button {
             position: absolute;
-            bottom: 5px; /* Sesuaikan posisi di bawah gambar */
+            bottom: 5px; 
             right: 5px;
             background: var(--gradient-primary-dark);
             color: #000;
@@ -346,20 +364,14 @@
         }
 
 
-        /* MEDIA QUERY KHUSUS LAYAR HP (REVISI FINAL TINGGI SLIDESHOW) */
+        /* MEDIA QUERY KHUSUS LAYAR HP */
         @media (max-width:768px){
             .match-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
             .hero h1{font-size:1.7rem;}
             .hero p{font-size:0.78rem;}
-            /* PERUBAHAN TERTARGET: Mengurangi padding di area Slideshow untuk mobile */
             .hero .container {
                 padding:5px;
             }
-            /* REVISI: Menghapus penyembunyian tombol LOGIN dan DAFTAR untuk HP. Semua 3 tombol akan ditampilkan. */
-            /*.auth-buttons .login,
-            .auth-buttons .register {
-                display: none;
-            }*/
             .auth-buttons .cs-button {
                 display: inline-block;
             }
@@ -387,10 +399,14 @@
     </header>
 
     <div class="running-ticker" id="runningTicker">
-        <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Bola Selanjutnya</div>
-        <div class="ticker-window">
-            <div class="ticker-track" id="tickerTrack">
-                <span class="ticker-item"><span class="ticker-badge">INFO</span> Memuat jadwal pertandingan...</span>
+        <div class="ticker-content">
+            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Bola Selanjutnya</div>
+            <div class="ticker-window">
+                <div class="ticker-track" id="tickerTrack">
+                    <div class="ticker-track-inner">
+                        <span class="ticker-item"><span class="ticker-badge">INFO</span> Memuat jadwal pertandingan...</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -450,7 +466,7 @@
     <script>
         const SLIDE_IMAGES = [
             'https://i.ibb.co/8S5s7Mb/Untitled-1.jpg',
-            'https://i.ibb.co/VWfn58Jz/Untitled-2.jpg',
+            'https://i.ibb.co/VWfn58EZ/Untitled-2.jpg',
             'https://i.ibb.co/60F0B9GC/Untitled-3.jpg'
         ];
         let currentSlide = 0;
@@ -686,8 +702,11 @@
             if (!items.length) {
                 items = DUMMY_UPCOMING;
             }
-            track.innerHTML = '';
-            const doubled = items.concat(items);
+            // Kosongkan dan buat inner track
+            track.innerHTML = '<div class="ticker-track-inner"></div>'; 
+            const innerTrack = track.querySelector('.ticker-track-inner');
+
+            const doubled = items.concat(items); // Duplikasi agar animasi berjalan mulus
             doubled.forEach(d => {
                 const span = document.createElement('span');
                 span.className = 'ticker-item';
@@ -696,7 +715,7 @@
                 const timePart = normalizeTimeToWIB(d.time);
                 const mid = datePart ? `${datePart} | ${timePart}` : timePart;
                 span.innerHTML = `${leagueBadge}${mid} — ${d.home || 'TBA'} vs ${d.away || 'TBA'}`;
-                track.appendChild(span);
+                innerTrack.appendChild(span);
             });
         }
         const EVENT_PROMOS = [
@@ -707,16 +726,13 @@
         ];
         const promoImgEl = document.getElementById('eventPromoImg');
         const promoLinkEl = document.getElementById('eventPromoLink');
-        // Mendapatkan tombol klaim baru
         const promoClaimBtnEl = document.getElementById('eventClaimBtn');
         let currentPromoIndex = 0;
         function renderPromo(index) {
             const promo = EVENT_PROMOS[index];
             if (!promo) return;
             promoImgEl.src = promo.img;
-            // Link pada gambar
             promoLinkEl.href = promo.link; 
-            // Link pada tombol Klaim
             promoClaimBtnEl.href = promo.link; 
         }
 
