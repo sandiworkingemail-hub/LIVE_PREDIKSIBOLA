@@ -293,14 +293,14 @@
         .floating-event-wrapper {position:fixed;right:16px;bottom:78px;width:280px;z-index:999;}
         .floating-event-box img {width:100%;}
 
-        /* MEDIA QUERY KHUSUS LAYAR HP (REVISI MINIMAL DI AREA SLIDESHOW) */
+        /* MEDIA QUERY KHUSUS LAYAR HP (REVISI FINAL TINGGI SLIDESHOW) */
         @media (max-width:768px){
             .match-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
             .hero h1{font-size:1.7rem;}
             .hero p{font-size:0.78rem;}
             /* PERUBAHAN TERTARGET: Mengurangi padding di area Slideshow untuk mobile */
             .hero .container {
-                padding:15px; /* Padding vertikal yang lebih kecil untuk tampilan HP */
+                padding:10px; /* Nilai padding vertikal yang lebih kecil (sebelumnya 15px) */
             }
             .auth-buttons{display:none;}
             .footer-grid{grid-template-columns:1fr;text-align:center;}
