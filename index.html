@@ -150,8 +150,9 @@
         }
         /* END CSS UNTUK RUNNING TEXT */
 
+        /* REVISI PADDING HERO */
         .hero {
-            padding:40px 0 45px 0;
+            padding:20px 0 25px 0; /* Padding lebih pendek */
             text-align:center;
             background:var(--gradient-hero-bg);
             position:relative;
@@ -172,9 +173,10 @@
             border-radius:10px;
             box-shadow:0 0 16px rgba(0,0,0,0.75);
         }
+        /* REVISI UKURAN H1 */
         .hero h1 {
             font-family:'Montserrat',sans-serif;
-            font-size:2.1rem;
+            font-size:1.8rem; /* Ukuran font lebih kecil */
             margin-bottom:8px;
             color:var(--color-primary);
         }
@@ -497,7 +499,17 @@
         /* MEDIA QUERY KHUSUS LAYAR HP */
         @media (max-width:768px){
             .match-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-            .hero h1{font-size:1.7rem;}
+            
+            /* REVISI PADDING HERO MOBILE */
+            .hero { 
+                padding: 15px 0 20px 0;
+            }
+            
+            /* REVISI UKURAN H1 MOBILE */
+            .hero h1{
+                font-size:1.5rem; /* Ukuran font lebih kecil di mobile */
+                margin-bottom: 6px;
+            }
             .hero p{font-size:0.78rem;}
             .hero .container {
                 padding:5px;
@@ -553,7 +565,7 @@
 
     <div class="running-ticker" id="runningTicker">
         <div class="ticker-content">
-            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Match </div>
+            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Match</div>
             <div class="ticker-window">
                 <div class="ticker-track" id="tickerTrack">
                     <div class="ticker-track-inner">
@@ -567,7 +579,7 @@
     <section class="hero">
         <div id="slideshow-container"></div>
         <div class="container">
-            <h1>MENANG JUTAAN RUPIAH HARI INI!</h1>
+            <h1>MENANG HARI INI!</h1>
             <p>Prediksi Skor Parlay Paling Akurat di Indonesia. Analisis Mendalam dari Pakar Liga Top Eropa.</p>
             <a href="https://2livebet303.work/" class="cta-button-lg" target="_blank">
                 <i class="fas fa-bolt"></i> PASANG TARUHAN & KLAIM BONUS
@@ -581,7 +593,7 @@
 
     <section class="predictions" id="predictions">
         <div class="container">
-            <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI!</h1>
+            <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI !</h1>
             <p class="section-tagline">13 Analisis Terbaik Siap Bawa Kemenangan Malam Ini!</p>
             
             <div class="match-grid" id="match-container">
