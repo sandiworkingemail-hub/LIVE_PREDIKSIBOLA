@@ -452,10 +452,13 @@
         .footer-col h4 {font-size:0.8rem;margin-bottom:8px;color:var(--color-primary);}
         .footer-col a {font-size:0.68rem;margin-bottom:6px;}
         .floating-cta {display:none;}
-        .floating-event-wrapper {
-            position:fixed;right:16px;
+.floating-event-wrapper {
+            position:fixed;
+            right:16px;
             bottom:100px; 
-            width:280px;z-index:999;
+            width:280px;
+            z-index:999;
+            display: none;
         }
         .floating-event-box {
             position: relative; 
@@ -928,7 +931,7 @@
             promoClaimBtnEl.href = promo.link; 
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
+                document.addEventListener('DOMContentLoaded', () => {
             renderSlides();
             loadPrimaryDataAndRender();
             loadUpcomingTicker();
@@ -936,7 +939,14 @@
             setInterval(() => {
                 currentPromoIndex = (currentPromoIndex + 1) % EVENT_PROMOS.length;
                 renderPromo(currentPromoIndex);
-            }, 5000);
+            }, 7000);
+            
+            setTimeout(() => {
+                const floatingEvent = document.getElementById('floatingEvent');
+                if (floatingEvent) {
+                    floatingEvent.style.display = 'block';
+                }
+            }, 7000);
         });
     </script>
 </body>
