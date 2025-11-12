@@ -246,23 +246,13 @@
             gap:14px;
         }
 
-        /* V2 - UNIFIED CARD STYLE (DENGAN EFEK NEON - LATAR HITAM PEKAT) */
-        .prediction-item {
-            /* Menggunakan warna solid yang sangat gelap/hitam untuk kontras maksimal */
-            background: #000000; 
-            
-            /* Border Tebal dan Berkilau (dari versi final sebelumnya) */
-            border: 2px solid rgba(255, 215, 0, 0.5); 
-            
-            /* Box Shadow Tebal dan Terang (dari versi final sebelumnya) */
-            box-shadow: 
-                0 0 8px rgba(255, 215, 0, 0.7), 
-                0 0 16px rgba(255, 215, 0, 0.4), 
-                0 0 25px rgba(0, 0, 0, 0.8);
-                
+.prediction-item {
+            background: linear-gradient(135deg, #383838, #2a2a2a);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.7), 0 0 18px rgba(255, 215, 0, 0.3); 
             margin-bottom: 0;
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 20px;
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -311,17 +301,18 @@
             animation: glow-blink 1.5s infinite alternate;
         }
 
-        /* REGULAR LEAGUE BADGE STYLE (Unifikasi tampilan seperti Big Match) */
+/* REGULAR LEAGUE BADGE STYLE (Unifikasi tampilan seperti Big Match) */
         .league-badge-regular {
-            background: #333;
-            color: var(--color-secondary);
+            background: gold;
+            color: black;
             padding: 3px 8px;
             border-radius: 4px;
             font-size: 0.65rem;
             font-weight: 900;
             letter-spacing: 0.5px;
-            border: 1px solid var(--color-secondary);
-            /* text-shadow: 0 0 4px var(--color-secondary); <-- NEON EFFECT DIHILANGKAN */
+            animation: glow-blink 1.5s infinite alternate; 
+            border: none;
+            text-shadow: 0 0 4px rgba(0,0,0,0.5); 
         }
         
         /* INFO BODY (Common to all) */
