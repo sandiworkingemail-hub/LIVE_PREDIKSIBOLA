@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJA PREDIKSI | Menang Parlay Hari Ini</title>
+    <meta name="description" content="Dapatkan prediksi skor parlay paling akurat hari ini. Analisis mendalam dari pakar untuk liga-liga top Eropa (EPL, LaLiga, Serie A). Menang jutaan sekarang!">
+    <meta property="og:title" content="RAJA PREDIKSI | Menang Parlay Hari Ini">
+    <meta property="og:description" content="Prediksi Skor Parlay Paling Akurat. Analisis Mendalam dari Pakar Liga Top Eropa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://11livebet303.xyz/">
+    <meta property="og:image" content="https://i.postimg.cc/SKFd6kQS/LOGO-LIVEBET303.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-bg-dark: #0a0a0a;
+            --color-card-bg: #1e1e1e;
+            --color-card-bg-transparent: rgba(30, 30, 30, 0.9);
+            --color-primary: #FFD700; /* Gold/Kuning */
+            --color-secondary: #c0bb33; /* Dark Yellow/Olive */
+            --color-text-light: #ffffff;
+            --color-text-medium: #aaaaaa;
+            --color-success: #28a745;
+            --gradient-primary-dark: linear-gradient(to right, #FFD700, #b39b00);
+            --gradient-secondary-dark: linear-gradient(to right, #c0bb33, #a39e2d);
+            --gradient-header-border: linear-gradient(to right, #000000, #FFD700, #000000);
+            --gradient-hero-bg: linear-gradient(180deg, var(--color-bg-dark), #1c1c1c);
+            --gradient-modal-border: linear-gradient(45deg, #FFD700, #c0bb33, #FFD700);
+            --gradient-footer-bg: linear-gradient(180deg, #000000, #1a1a1a);
+            --color-glow: rgba(255, 215, 0, 0.7);
+            --color-glow-soft: rgba(255, 215, 0, 0.3);
+            --color-shimmer: rgba(255, 255, 255, 0.15);
+            /* New V2 Colors */
+            --color-v2-darker: #151515;
+            --color-v2-score: #333333;
+            --color-v2-recommendation: #c0bb33;
+        }
+        @keyframes shimmer {0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+        @keyframes card-glow-pulse {0%{box-shadow:0 0 4px rgba(255,215,0,0.25),0 0 6px rgba(0,0,0,0.6)}50%{box-shadow:0 0 10px var(--color-glow),0 0 16px rgba(255,215,0,0.4)}100%{box-shadow:0 0 4px rgba(255,215,0,0.25),0 0 6px rgba(0,0,0,0.6)}}
+        @keyframes glow-blink {0%,100%{box-shadow:0 0 6px var(--color-glow-soft),0 0 12px rgba(255,215,0,0.2)}50%{box-shadow:0 0 16px var(--color-glow),0 0 24px rgba(255,215,0,0.4)}100%{box-shadow:0 0 6px var(--color-glow-soft),0 0 12px rgba(255,215,0,0.2)}100%{box-shadow:0 0 6px var(--color-glow-soft),0 0 12px rgba(255,215,0,0.2)}}
+        @keyframes scale-pulse {0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
+        @keyframes title-glow-blink {0%,100%{text-shadow:0 0 6px rgba(255,215,0,0.5)}50%{text-shadow:0 0 16px var(--color-primary)}}
+        @keyframes ticker-move {0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+        body {
+            font-family:'Roboto',sans-serif;
+            margin:0;
+            padding:0;
+            background-color:var(--color-bg-dark);
+            color:var(--color-text-light);
+            line-height:1.5;
+            font-size:14px;
+            /* Proteksi Anti-Copy/Seleksi Teks */
+            user-select: none;         
+            -moz-user-select: none;    
+            -webkit-user-select: none; 
+            -ms-user-select: none;     
+        }
+        .container {
+            width:95%;
+            max-width:1200px;
+            margin:0 auto;
+            padding:0 0 32px 0;
+            position:relative;
+            z-index:2;
+        }
+        header {
+            background:var(--gradient-footer-bg);
+            padding:10px 0;
+            position:relative;
+            text-align:center;
+            z-index:100;
+        }
+        header::after {
+            content:'';
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height:2px;
+            background:var(--gradient-header-border);
+        }
+        .logo-nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            width:95%;
+            max-width:1200px;
+            margin:0 auto;
+        }
+        .logo {display:flex;align-items:center;gap:6px;}
+        .logo img {height:30px;}
+        .logo-text {display: none;}
+        .auth-buttons {
+            display:flex;
+            gap:6px;
+        }
+        .auth-buttons a {
+            color:var(--color-text-light);
+            text-decoration:none;
+            padding:6px 10px;
+            border-radius:4px;
+            font-size:0.72rem;
+            white-space:nowrap;
+        }
+        .auth-buttons .cs-button {background:#5cb85c;}
+        .auth-buttons .login {background:#333;}
+        .auth-buttons .register {background:var(--color-secondary);}
+        
+        /* CSS UNTUK RUNNING TEXT */
+        .running-ticker {
+            background:#000;
+            border-bottom:1px solid rgba(255,215,0,0.25);
+            display: block; 
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        .ticker-content {
+            display: flex; 
+            align-items: center;
+        }
+        .ticker-title {
+            background:var(--gradient-primary-dark);
+            padding:4px 10px;
+            font-weight:700;
+            display:flex;
+            align-items:center;
+            gap:5px;
+            text-transform:uppercase;
+            font-size:0.68rem;
+            flex-shrink: 0; 
+        }
+        .ticker-window {
+            overflow:hidden;
+            flex:1;
+        }
+        .ticker-track {
+            display:inline-block;
+            width: 200%; 
+            padding:6px 0;
+            animation:ticker-move 30s linear infinite; 
+        }
+        .ticker-track-inner {
+             display: inline-flex;
+             gap: 28px;
+        }
+        .ticker-item {font-size:0.68rem;}
+        .ticker-badge {
+            background:rgba(255,215,0,0.15);
+            border:1px solid rgba(255,215,0,0.4);
+            border-radius:4px;
+            padding:0 4px;
+            font-size:0.6rem;
+            margin-right:4px;
+        }
+        /* END CSS UNTUK RUNNING TEXT */
+
+        /* REVISI PADDING HERO */
+        .hero {
+            padding:20px 0 25px 0; /* Padding lebih pendek */
+            text-align:center;
+            background:var(--gradient-hero-bg);
+            position:relative;
+            overflow:hidden;
+        }
+        #slideshow-container {position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;}
+        .slide-image {
+            position:absolute;top:0;left:0;width:100%;height:100%;
+            background-size:cover;background-position:center;
+            opacity:0;transition:opacity 1.5s ease-in-out;
+        }
+        .slide-image.active {opacity:1;}
+        .hero .container {
+            position:relative;
+            z-index:15;
+            background-color:rgba(0,0,0,0.7);
+            padding:5px;
+            border-radius:10px;
+            box-shadow:0 0 16px rgba(0,0,0,0.75);
+        }
+        /* REVISI UKURAN H1 */
+        .hero h1 {
+            font-family:'Montserrat',sans-serif;
+            font-size:1.8rem; /* Ukuran font lebih kecil */
+            margin-bottom:8px;
+            color:var(--color-primary);
+        }
+        .hero p {
+            font-size:0.9rem;
+            color:var(--color-text-medium);
+            max-width:650px;
+            margin:0 auto 20px auto;
+        }
+        .cta-button-lg {
+            display:inline-block;
+            background:var(--gradient-primary-dark);
+            color:#fff;
+            padding:8px 18px;
+            border-radius:6px;
+            font-weight:800;
+            font-size:0.78rem;
+            border:2px solid rgba(255,215,0,0.9);
+            /* animation:glow-blink 2.5s infinite alternate,scale-pulse 2.5s infinite alternate; <-- EFEK DENYUT DIHILANGKAN */
+        }
+        .stats-bar {
+            background:rgba(0,0,0,0.5);
+            padding:12px 0;
+            margin-top:26px;
+            border:1px solid rgba(255,215,0,0.15);
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:12px;
+        }
+        .stat-item {
+            color:var(--color-primary);
+            font-size:0.82rem;
+            font-weight:700;
+            display:flex;
+            align-items:center;
+            gap:4px;
+        }
+        .predictions {background:rgba(10,10,10,0.95);padding-top:15px;position:relative;overflow:hidden;}
+        .predictions::after {
+            content:'';
+            position:absolute;top:0;left:0;width:200%;height:100%;
+            background:linear-gradient(90deg,transparent 0%,var(--color-shimmer) 25%,transparent 50%);
+            transform:skewX(-25deg) translateX(-100%);
+            animation:shimmer 12s infinite linear;
+            pointer-events:none;
+        }
+        .predictions .container>* {position:relative;z-index:1;}
+        .main-match-title {
+            font-family:'Montserrat',sans-serif;
+            font-size:1.8rem;
+            font-weight:900;
+            text-align:center;
+            color:var(--color-primary);
+            margin-bottom:4px;
+        }
+        .section-tagline {
+            font-size:0.8rem;
+            text-align:center;
+            color:var(--color-secondary);
+            margin-bottom:20px;
+        }
+        
+        .match-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:14px;
+        }
+
+.prediction-item {
+            background: linear-gradient(135deg, #383838, #2a2a2a);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.7), 0 0 18px rgba(255, 215, 0, 0.3); 
+            margin-bottom: 0;
+            padding: 15px;
+            border-radius: 20px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .prediction-item:hover {
+            /* Hover shadow tetap diperkuat */
+            box-shadow: 
+                0 0 12px var(--color-primary), 
+                0 0 30px rgba(255, 215, 0, 0.6); 
+        }
+        
+        /* MENGHILANGKAN TEXT SHADOW (Text terlihat solid seperti gambar referensi) */
+        .card-team .team-name, 
+        .recommendation {
+            text-shadow: none; 
+        }
+
+
+        /* FEATURED MATCH MODIFIER - ONLY FOR THE FIRST CARD */
+        .featured-match {
+            grid-column: 1 / -1; 
+            border: 3px solid var(--color-primary); /* Border lebih tebal */
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.7), 0 0 50px rgba(255, 215, 0, 0.3); /* Base glow sangat kuat */
+            /* animation: card-glow-pulse 3s infinite alternate; <-- EFEK DENYUT DIHILANGKAN */ 
+        }
+        
+        /* HEADER (Common to all) */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* BIG MATCH BADGE STYLE (Red, Pulsing) */
+        .featured-badge {
+            background: red;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            animation: glow-blink 1.5s infinite alternate;
+        }
+
+/* REGULAR LEAGUE BADGE STYLE (Unifikasi tampilan seperti Big Match) */
+        .league-badge-regular {
+            background: gold;
+            color: black;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            animation: glow-blink 1.5s infinite alternate; 
+            border: none;
+            text-shadow: 0 0 4px rgba(0,0,0,0.5); 
+        }
+        
+        /* INFO BODY (Common to all) */
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        .card-team {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-team img {
+            width: 50px; 
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+        .featured-match .card-team img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .card-team .team-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-text-light);
+            line-height: 1.1;
+        }
+        .featured-match .card-team .team-name {
+            font-size: 1rem;
+            color: var(--color-primary);
+        }
+
+        /* SCORE BOX (Common to all) */
+        .card-score-box {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .card-score-box .score-prediction {
+            font-size: 1.6rem; 
+            padding: 5px 10px;
+            font-weight: 900;
+            color: #000;
+            background: var(--color-primary);
+            border-radius: 6px;
+            border: 2px solid #fff;
+            /* Tambahkan glow pada kotak skor */
+            box-shadow: 0 0 5px var(--color-primary), 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+        .featured-match .card-score-box .score-prediction {
+             font-size: 2rem;
+        }
+
+        .card-score-box .label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+        }
+        
+        /* FOOTER (Common to all) */
+        .card-action {
+            margin-top: 15px;
+            text-align: center;
+            border-top: 1px dashed rgba(255, 215, 0, 0.2);
+            padding-top: 10px;
+        }
+        .card-action .recommendation {
+            font-size: 0.8rem; 
+            font-weight: 700; 
+            color: var(--color-secondary); 
+            display:block; 
+            margin-bottom: 5px;
+        }
+        .card-action .detail-link {
+            width: auto;
+            margin: 0;
+            padding: 6px 15px;
+            font-size: 0.7rem;
+            background: var(--gradient-secondary-dark);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        /* END UNIFIED CARD STYLES */
+
+
+        .modal {
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.95);
+            z-index:1000;
+            padding-top:50px;
+            overflow-y: auto;
+        }
+        .modal-content {
+            background:#2c2c2c;
+            margin:5% auto;
+            max-width:540px;
+            padding:20px 20px 24px 20px;
+            border-radius:10px;
+            position:relative;
+        }
+        .close-button {position:absolute;top:10px;right:16px;font-size:28px;color:#aaa;}
+        
+        /* NEW CTA BUTTON STYLE FOR MODAL */
+        .modal-cta-button {
+            display: block; 
+            text-align: center;
+            text-decoration: none;
+            background: var(--gradient-primary-dark);
+            color: #000; 
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            margin-top: 15px; 
+            border: 2px solid #fff;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            /* animation: glow-blink 2.5s infinite alternate, scale-pulse 2.5s infinite alternate; <-- EFEK DENYUT DIHILANGKAN */
+        }
+        /* END NEW CTA BUTTON STYLE FOR MODAL */
+
+
+        footer {background:var(--gradient-footer-bg);padding:15px 0 15px 0;font-size:0.7rem;}
+        .footer-grid {
+            display: none; 
+        }
+        .footer-col h4 {font-size:0.8rem;margin-bottom:8px;color:var(--color-primary);}
+        .footer-col a {font-size:0.68rem;margin-bottom:6px;}
+        .floating-cta {display:none;}
+.floating-event-wrapper {
+            position:fixed;
+            right:16px;
+            bottom:100px; 
+            width:280px;
+            z-index:999;
+            display: none;
+        }
+        .floating-event-box {
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .floating-event-box img {width:100%; display: block;}
+        .floating-event-meta {display: none;}
+        .responsible-gambling {
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .floating-claim-button {
+            position: absolute;
+            bottom: 5px; 
+            right: 5px;
+            background: var(--gradient-primary-dark);
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            line-height: 1;
+        }
+        .floating-event-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 3px #000;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+
+        /* MEDIA QUERY KHUSUS LAYAR HP */
+        @media (max-width:768px){
+            .match-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+            
+            /* REVISI PADDING HERO MOBILE */
+            .hero { 
+                padding: 15px 0 20px 0;
+            }
+            
+            /* REVISI UKURAN H1 MOBILE */
+            .hero h1{
+                font-size:1.5rem; /* Ukuran font lebih kecil di mobile */
+                margin-bottom: 6px;
+            }
+            .hero p{font-size:0.78rem;}
+            .hero .container {
+                padding:5px;
+            }
+            .auth-buttons .cs-button {
+                display: inline-block;
+            }
+            .footer-grid{grid-template-columns:1fr;text-align:center;}
+            .floating-event-wrapper{right:8px;
+                bottom:90px;
+                width:80vw;max-width:320px;}
+            
+            /* Penyesuaian Mobile */
+            .card-team img {width: 45px; height: 45px;}
+            .card-team .team-name {font-size: 0.75rem;}
+            .card-score-box .score-prediction {
+                font-size: 1.3rem; 
+                padding: 3px 6px;
+            }
+            
+            /* Penyesuaian Featured Mobile */
+            .featured-match .card-team img {width: 60px; height: 60px;}
+            .featured-match .card-team .team-name {font-size: 0.85rem;}
+            .featured-match .card-score-box .score-prediction {font-size: 1.6rem;}
+            .card-action .detail-link {font-size: 0.6rem;}
+
+            /* Penyesuaian Modal Mobile */
+            .modal-cta-button {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
+        }
+        @media (max-width:480px){
+            .match-grid{grid-template-columns:1fr;}
+            .card-score-box .score-prediction {font-size: 1.4rem;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-nav">
+            <div class="logo">
+                <img src="https://i.postimg.cc/SKFd6kQS/LOGO-LIVEBET303.png" alt="Logo LIVEBET303">
+                <span class="logo-text">RAJA PREDIKSI</span>
+            </div>
+            <div class="auth-buttons">
+                <a href="https://cutt.ly/wa3livebet303" class="cs-button" target="_blank">KONTAK CS</a>
+                <a href="https://11livebet303.xyz/" class="login" target="_blank">LOGIN</a>
+                <a href="https://11livebet303.xyz/" class="register" target="_blank">DAFTAR</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="running-ticker" id="runningTicker">
+        <div class="ticker-content">
+            <div class="ticker-title"><i class="fas fa-futbol"></i> Jadwal Match</div>
+            <div class="ticker-window">
+                <div class="ticker-track" id="tickerTrack">
+                    <div class="ticker-track-inner">
+                        <span class="ticker-item"><span class="ticker-badge">INFO</span> Memuat jadwal pertandingan...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div id="slideshow-container"></div>
+        <div class="container">
+            <h1>MENANG HARI INI!</h1>
+            <p>Prediksi Skor Parlay Paling Akurat di Indonesia. Analisis Mendalam dari Pakar Liga Top Eropa.</p>
+            <a href="https://11livebet303.xyz/" class="cta-button-lg" target="_blank">
+                <i class="fas fa-bolt"></i> PASANG TARUHAN & KLAIM BONUS
+            </a>
+            <div class="stats-bar">
+                <span class="stat-item"><i class="fas fa-check-circle" style="color:var(--color-success);"></i> 9/10 PREDIKSI TEMBUS</span>
+                <span class="stat-item"><i class="fas fa-coins"></i> 780 JUTA+ TOTAL MENANG</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="predictions" id="predictions">
+        <div class="container">
+            <h1 class="main-match-title">PREDIKSI JITU PARLAY HARI INI !</h1>
+            <p class="section-tagline">13 Analisis Terbaik Siap Bawa Kemenangan Malam Ini!</p>
+            
+            <div class="match-grid" id="match-container">
+                <p style="grid-column:1/-1;color:var(--color-primary);font-size:0.78rem;">Memuat Prediksi Utama...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="responsible-gambling" style="text-align:center;margin-top:6px;">
+                &copy; 2025 RAJA PREDIKSI | LIVEBET303
+            </div>
+        </div>
+    </footer>
+
+    <div id="predictionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title" style="color:var(--color-primary);border-bottom:1px solid #333;padding-bottom:6px;font-size:1.05rem;">DETAIL ANALISIS</h2>
+            <div id="modal-body" style="font-size:0.75rem;"></div>
+            <a href="https://11livebet303.xyz/" class="modal-cta-button" target="_blank">
+                <i class="fas fa-arrow-right"></i> BET SEKARANG
+            </a>
+            </div>
+    </div>
+
+    <div class="floating-event-wrapper" id="floatingEvent">
+        <div class="floating-event-box">
+            <span class="floating-event-close" onclick="document.getElementById('floatingEvent').style.display='none'">×</span>
+            <a href="#" id="eventPromoLink" target="_blank">
+                <img src="https://i.ibb.co/pjRZ2L1R/EVENT-TEBAK-SCORE-SPESIAL-MATCH.webp" alt="Event Promo" id="eventPromoImg">
+            </a>
+            <a href="#" id="eventClaimBtn" class="floating-claim-button" target="_blank">Klaim</a>
+        </div>
+    </div>
+
+    <script>
+        // START SCRIPT PROTEKSI (Anti-Debugging & Anti-Inspect)
+
+        // Mencegah klik kanan (context menu)
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Mencegah tombol F12, Ctrl+Shift+I, dan Ctrl+Shift+C
+        document.onkeydown = function(e) {
+            if (e.keyCode === 123) { // F12
+                return false;
+            }
+            // Ctrl+Shift+I (Inspeksi) atau Ctrl+Shift+C (Inspect Element)
+            if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67)) { 
+                return false;
+            }
+        };
+
+        // Skrip Anti-Debugger yang agresif (membuat browser freeze/sulit di-debug)
+        (function() {
+            let check = function() {
+                try {
+                    // Tampilkan pesan di console (dengan style besar/info)
+                    console.info("%cHayo mau ngapain?? Langsung main aja di Livebet303!", 
+                        "color: yellow; font-size: 24px; font-weight: bold; background-color: red; padding: 5px; border-radius: 5px;");
+                        
+                    // Memaksa DevTools untuk berhenti jika terbuka
+                    (function() {}).constructor('debugger')(); 
+                } catch (err) {}
+            };
+            // Menjalankan cek setiap 100ms
+            setInterval(check, 100); 
+        })();
+
+        // END SCRIPT PROTEKSI
+        
+        // Lanjutkan dengan KODE JAVASCRIPT UTAMA Anda DI SINI (Disarankan sudah diobfuscate)
+
+        const SLIDE_IMAGES = [
+            'https://i.ibb.co/JjZR4psk/Untitled-1-2.jpg',
+            'https://i.ibb.co/prKC2HWk/background.jpg',
+            'https://i.ibb.co/60F0B9GC/Untitled-3.jpg'
+        ];
+        let currentSlide = 0;
+        let slideInterval;
+        function renderSlides() {
+            const container = document.getElementById('slideshow-container');
+            if (!container) return;
+            container.innerHTML = '';
+            SLIDE_IMAGES.forEach((url, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide-image';
+                slide.style.backgroundImage = `url('${url}')`;
+                if (index === 0) slide.classList.add('active');
+                container.appendChild(slide);
+            });
+            if (SLIDE_IMAGES.length > 1) {
+                if (slideInterval) clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+        }
+        function nextSlide() {
+            const slides = document.querySelectorAll('#slideshow-container .slide-image');
+            if (!slides.length) return;
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // URL DATA UTAMA
+        const PRIMARY_PREDICTION_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vScZPyJaNlifvm148a2F6SlUpxWwtFR-w6T1xfBA8nCMQuJHI4hNjao1TRHD0b1dRjBpbW_0sXQCMKZ/pub?gid=0&single=true&output=csv'; 
+        const UPCOMING_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vScZPyJaNlifvm148a2F6SlUpxWwtFR-w6T1xfBA8nCMQuJHI4hNjao1TRHD0b1dRjBpbW_0sXQCMKZ/pub?gid=1071168271&single=true&output=csv';
+        const DUMMY_DATA = ["Liga", "Pertandingan Lainnya", "00:30", "TIM KANDANG", "TIM TANDANG", "50", "50", "Analisis segera hadir...", "2 - 1", "3-0-2", "Over 2.5", "TIM KANDANG -0.5", "", ""];
+        const DUMMY_UPCOMING = [
+            { league: 'EPL', date: '20-Nov-25', time: '20:00', home: 'CHELSEA', away: 'LIVERPOOL' },
+            { league: 'SERIE A', date: '20-Nov-25', time: '22:30', home: 'JUVENTUS', away: 'MILAN' }
+        ];
+        let MATCH_DATA_CACHE = [];
+        const logoMap = {
+            "REAL MADRID": "https://i.ibb.co/Q3q43B4W/REAL-MADRID.png",
+            "BARCELONA": "https://i.postimg.cc/Wb2mzML1/FC-Barcelona-crest-svg.webp",
+            "AS ROMA": "https://i.postimg.cc/ZqqRmrYN/AS-Roma.png",
+            "PARMA": "https://i.postimg.cc/VvF0K24P/parma.png",
+            "LIVERPOOL": "https://i.postimg.cc/0QcbmcWq/Liverpool.png",
+            "MANCHESTER CITY": "https://i.postimg.cc/SKLXQycj/Manchester-City.png",
+            "MANCHESTER UTD": "https://i.postimg.cc/N0K1QyvW/Manchester-United.png",
+            "BAYERN MUNCHEN": "https://i.postimg.cc/c4d3P59g/Bayern-Munchen.png"
+        };
+        function getLogoUrl(teamName) {
+            if (!teamName) return 'https://i.postimg.cc/85z1w5GZ/default-logo.png';
+            const normalizedName = teamName.trim().toUpperCase();
+            return logoMap[normalizedName] || 'https://i.postimg.cc/85z1w5GZ/default-logo.png';
+        }
+
+        function openModal(data) {
+            document.getElementById('predictionModal').style.display = 'block';
+            populateModal(data);
+        }
+        function closeModal() {
+            document.getElementById('predictionModal').style.display = 'none';
+        }
+        function populateModal(data) {
+            const safeData = Array.isArray(data) ? data : [];
+            const [liga, judul, waktu, timKandang, timTandang, , , analisis, prediksiSkor, h2h, pasarOU, rekomendasi] =
+                new Array(12).fill('').map((_, i) => safeData[i] || '');
+            let h2hK = '?', h2hS = '?', h2hT = '?';
+            if (h2h && typeof h2h === 'string' && h2h.includes('-')) {
+                [h2hK, h2hS, h2hT] = h2h.split('-');
+            }
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            modalTitle.innerHTML = `DETAIL ANALISIS PARLAY: <span style="color:var(--color-secondary)">${timKandang || 'TIM'} vs ${timTandang || 'TIM'}</span>`;
+            modalBody.innerHTML = `
+                <h3 style="color:#fff;font-size:0.8rem;margin-bottom:4px;">${judul || 'Pertandingan'}</h3>
+                <p style="color:#fff;font-size:0.7rem;margin-bottom:10px;">${liga || '-'} | Pukul ${waktu || '--:--'} WIB</p>
+                <div class="modal-info-box" style="margin-bottom:10px;background:#242424;padding:10px;border-radius:5px;border:1px solid rgba(192,187,51,0.3);">
+                    <h4 style="color:var(--color-primary);font-size:0.75rem;margin-bottom:6px;"><i class="fas fa-handshake"></i> HEAD-TO-HEAD</h4>
+                    <ul style="list-style:none;padding:0;margin:0;font-size:0.7rem;">
+                        <li>${timKandang || 'Kandang'}: <strong>${h2hK} Menang</strong></li>
+                        <li>${timTandang || 'Tandang'}: <strong>${h2hT} Menang</strong></li>
+                        <li>Seri: <strong>${h2hS}</strong></li>
+                    </ul>
+                </div>
+                <div class="modal-info-box" style="background:#242424;padding:10px;border-radius:5px;border:1px solid rgba(192,187,51,0.3);">
+                    <h4 style="color:var(--color-primary);font-size:0.75rem;margin-bottom:6px;"><i class="fas fa-chart-line"></i> PREDIKSI</h4>
+                    <p style="font-size:0.7rem;">Prediksi Skor: <strong>${prediksiSkor || '?-?'}</strong></p>
+                    <p style="font-size:0.7rem;">O/U: <strong>${pasarOU || 'N/A'}</strong></p>
+                    <p class="reco-box" style="background:var(--gradient-secondary-dark);padding:7px 10px;border-radius:4px;color:#fff;font-weight:700;font-size:0.7rem;margin-top:6px;">REKOMENDASI: ${rekomendasi || 'Tunggu Analisis'}</p>
+                    <p style="font-size:0.7rem;color:#eee;margin-top:6px;">${analisis || 'Analisis segera hadir...'}</p>
+                </div>
+            `;
+        }
+        window.onclick = function(e){
+            const modal = document.getElementById('predictionModal');
+            if (e.target === modal) closeModal();
+        }
+        
+        // UNIFIED FUNCTION FOR ALL CARDS
+        function createPredictionCard(data, index) {
+            const [liga, judul, waktu, timKandang, timTandang, , , , prediksiSkor, , , rekomendasi, sheetHomeLogo, sheetAwayLogo] = data;
+            
+            const isFeatured = index === 0;
+            const homeLogo = sheetHomeLogo ? sheetHomeLogo.trim() : getLogoUrl(timKandang);
+            const awayLogo = sheetAwayLogo ? sheetAwayLogo.trim() : getLogoUrl(timTandang);
+            const formattedTime = waktu ? waktu.replace(/AM|PM/gi,'').trim() + ' WIB' : '--:-- WIB';
+            
+            const card = document.createElement('div');
+            card.className = isFeatured ? 'prediction-item featured-match' : 'prediction-item';
+            
+            // Logika untuk Badge/Judul Liga
+            const headerContent = isFeatured 
+                ? `<span class="featured-badge">🔥 BIG MATCH HARI INI</span>`
+                : `<span class="league-badge-regular">${liga.toUpperCase()}</span>`; // Menggunakan style badge baru
+
+            card.innerHTML = `
+                <div class="card-header">
+                    ${headerContent} 
+                    <span style="font-size: 0.75rem; color: var(--color-text-medium);"><i class="far fa-clock"></i> ${formattedTime}</span>
+                </div>
+                <div class="card-info">
+                    <div class="card-team">
+                        <img src="${homeLogo}" alt="Logo ${timKandang}" onerror="this.onerror=null;this.src='https://i.postimg.cc/85z1w5GZ/default-logo.png';">
+                        <span class="team-name">${timKandang}</span>
+                    </div>
+                    <div class="card-score-box">
+                        <span class="label">PREDIKSI SKOR</span>
+                        <div class="score-prediction">${prediksiSkor}</div>
+                    </div>
+                    <div class="card-team">
+                        <img src="${awayLogo}" alt="Logo ${timTandang}" onerror="this.onerror=null;this.src='https://i.postimg.cc/85z1w5GZ/default-logo.png';">
+                        <span class="team-name">${timTandang}</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <span class="recommendation"><i class="fas fa-chart-line"></i> ${rekomendasi.toUpperCase()}</span>
+                    <a href="#" class="detail-link" data-match-index="${index}">DETAIL ANALISIS LENGKAP</a>
+                </div>
+            `;
+            
+            card.querySelector('.detail-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(MATCH_DATA_CACHE[index]); 
+            });
+            return card;
+        }
+
+
+        function renderMatches(dataArray, container) {
+            container.innerHTML = '';
+            
+            // Render all cards using the unified function
+            dataArray.slice(0, 13).forEach((rowData, index) => {
+                const card = createPredictionCard(rowData, index); 
+                container.appendChild(card);
+            });
+        }
+
+        function parseCSV(csvText) {
+            const rows = csvText.trim().split('\n');
+            if (!rows.length) return [];
+            const dataRows = rows.slice(1);
+            const dataArray = [];
+            const csvRegex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
+            dataRows.forEach(row => {
+                const cells = row.split(csvRegex).map(c => c.trim().replace(/^"|"$/g, ''));
+                if (cells[3] && cells[3].trim() !== '') {
+                    dataArray.push(cells);
+                }
+            });
+            return dataArray;
+        }
+        
+        // Fungsi untuk memuat data utama (Disesuaikan untuk 13 slot)
+        async function loadPrimaryDataAndRender() {
+            const matchContainer = document.getElementById('match-container');
+            const url = PRIMARY_PREDICTION_URL;
+            let dataArray = [];
+            let currentCount = 0;
+            
+            matchContainer.innerHTML = `<p style="grid-column:1/-1;color:var(--color-primary);font-size:0.75rem;">Memuat Prediksi Utama...</p>`;
+            
+            if (MATCH_DATA_CACHE.length > 0) {
+                dataArray = MATCH_DATA_CACHE;
+                currentCount = dataArray.length;
+            } else {
+                try {
+                    const response = await fetch(url);
+                    if (response.ok) {
+                        const csvText = await response.text();
+                        dataArray = parseCSV(csvText);
+                        currentCount = dataArray.length;
+                    }
+                } catch (e) {}
+            }
+            
+            // TARGET COUNT = 13 (1 Featured + 12 Match Cards)
+            const targetCount = 13; 
+            const remaining = targetCount - dataArray.length;
+            if (remaining > 0) {
+                for (let i=0;i<remaining;i++){
+                    dataArray.push([...DUMMY_DATA]);
+                }
+            }
+
+            MATCH_DATA_CACHE = dataArray; // Simpan ke cache
+            renderMatches(dataArray, matchContainer);
+
+            if (currentCount < targetCount) {
+                const info = document.createElement('p');
+                info.style.gridColumn = '1 / -1';
+                info.style.color = 'var(--color-text-medium)';
+                info.style.marginTop = '10px';
+                info.style.fontSize = '0.68rem';
+                info.textContent = `* Hanya ${currentCount} prediksi valid. Sisanya dummy.`;
+                matchContainer.appendChild(info);
+            }
+        }
+        
+        function formatDateTicker(raw) {
+            if (!raw) return '';
+            if (/^\d{1,2}:\d{2}/.test(raw)) return '';
+            const parts = raw.split('-');
+            if (parts.length === 3) {
+                return parts[0] + ' ' + parts[1];
+            }
+            return raw;
+        }
+        function normalizeTimeToWIB(t) {
+            if (!t) return '';
+            let time = t.trim();
+            time = time.replace(/AM|PM/gi,'').trim();
+            return time + ' WIB';
+        }
+        async function loadUpcomingTicker() {
+            const track = document.getElementById('tickerTrack');
+            let items = [];
+            try {
+                const res = await fetch(UPCOMING_URL);
+                if (res.ok) {
+                    const csvText = await res.text();
+                    const rows = csvText.trim().split('\n').slice(1);
+                    const csvRegex = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/;
+                    rows.forEach(row => {
+                        const cells = row.split(csvRegex).map(c => c.trim().replace(/^"|"$/g, ''));
+                        if (cells.length >= 6 && cells[4]) {
+                            items.push({
+                                league: cells[0] || '',
+                                date: cells[2] || '',
+                                time: cells[3] || '',
+                                home: cells[4] || '',
+                                away: cells[5] || ''
+                            });
+                        }
+                    });
+                }
+            } catch (e) {}
+            if (!items.length) {
+                items = DUMMY_UPCOMING;
+            }
+            track.innerHTML = '<div class="ticker-track-inner"></div>'; 
+            const innerTrack = track.querySelector('.ticker-track-inner');
+
+            const doubled = items.concat(items);
+            doubled.forEach(d => {
+                const span = document.createElement('span');
+                span.className = 'ticker-item';
+                const leagueBadge = d.league ? `<span class="ticker-badge">${d.league}</span>` : '';
+                const datePart = formatDateTicker(d.date);
+                const timePart = normalizeTimeToWIB(d.time);
+                const mid = datePart ? `${datePart} | ${timePart}` : timePart;
+                span.innerHTML = `${leagueBadge}${mid} — ${d.home || 'TBA'} vs ${d.away || 'TBA'}`;
+                innerTrack.appendChild(span);
+            });
+        }
+        const EVENT_PROMOS = [
+            {title:'Event Tebak Score Spesial',img:'https://i.ibb.co/pjRZ2L1R/EVENT-TEBAK-SCORE-SPESIAL-MATCH.webp',link:'https://t.me/cslivebet303'},
+            {title:'Bonus Spesial Sportbook',img:'https://i.ibb.co/239f2gnv/BONUS-SPESIAL-SPORTBOOK-AKHIR-PEKAN.webp',link:'https://11livebet303.xyz'},
+            {title:'Gas Full Parlay',img:'https://i.ibb.co/n8jCV7HS/GAS-FULL-PARLAY.webp',link:'https://t.me/cslivebet303'},
+            {title:'Cashback Sportbook 20%',img:'https://i.ibb.co/tp8Ktg5B/51-d50f5ba20643494f89ac96618af28dbf.webp',link:'https://t.me/cslivebet303'}
+        ];
+        const promoImgEl = document.getElementById('eventPromoImg');
+        const promoLinkEl = document.getElementById('eventPromoLink');
+        const promoClaimBtnEl = document.getElementById('eventClaimBtn');
+        let currentPromoIndex = 0;
+        function renderPromo(index) {
+            const promo = EVENT_PROMOS[index];
+            if (!promo) return;
+            promoImgEl.src = promo.img;
+            promoLinkEl.href = promo.link; 
+            promoClaimBtnEl.href = promo.link; 
+        }
+
+                document.addEventListener('DOMContentLoaded', () => {
+            renderSlides();
+            loadPrimaryDataAndRender();
+            loadUpcomingTicker();
+            renderPromo(currentPromoIndex);
+            setInterval(() => {
+                currentPromoIndex = (currentPromoIndex + 1) % EVENT_PROMOS.length;
+                renderPromo(currentPromoIndex);
+            }, 7000);
+            
+            setTimeout(() => {
+                const floatingEvent = document.getElementById('floatingEvent');
+                if (floatingEvent) {
+                    floatingEvent.style.display = 'block';
+                }
+            }, 7000);
+        });
+    </script>
+</body>
+</html>
